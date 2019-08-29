@@ -4,10 +4,11 @@
  */
 define([
     'jquery',
+    'underscore',
     'mage/translate',
+    'Magento_Catalog/js/product/view/product-ids-resolver',
     'jquery/ui',
-    'Magento_Catalog/js/catalog-add-to-cart'
-], function($, $t) {
+], function($, _, $t, idsResolver) {
     "use strict";
 
     return function (originalCatalogAddToCart) {
