@@ -6,6 +6,7 @@
             <sidebar>
                 <auto_open>0</auto_open>
                 <auto_open_timeout>3</auto_open_timeout>
+                <scroll_top>0</scroll_top>
             </sidebar>
         </checkout>
     </default>

@@ -4,17 +4,25 @@
     <system>
         <section id="checkout">
             <group id="sidebar">
-                <field id="auto_open" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="auto_open" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Automatically Open Minicart After Adding Product to Cart</label>
                     <comment>Depends on theme and ajax add to cart being enabled</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
-                <field id="auto_open_timeout" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="auto_open_timeout" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Timeout in Seconds (0-10) Before Automatically Closing Sidebar</label>
                     <depends>
                         <field id="auto_open">1</field>
                     </depends>
                     <validate>validate-digits validate-digits-range digits-range-0-10</validate>
+                </field>
+                <field id="scroll_top" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Scroll to Top of Page After Adding Product to Cart</label>
+                    <comment>After adding product to cart, auto scrolls user to top of page to see their mini cart</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="auto_open">1</field>
+                    </depends>
                 </field>
             </group>
         </section>

@@ -3,7 +3,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="minicart.addons">
-            <block class="HumanElement\MiniCartAutoOpen\Block\Sidebar" name="minicart.autoopen" template="HumanElement_MiniCartAutoOpen::minicart_open.phtml"/>
+            <block name="minicart.autoopen">
+                <arguments>
+                    <argument name="template" xsi:type="string">HumanElement_MiniCartAutoOpen::minicart_open.phtml</argument>
+                    <argument name="view_model" xsi:type="object">HumanElement\MiniCartAutoOpen\ViewModel\Sidebar</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>

@@ -1,7 +1,12 @@
+<?php
+/** @var \HumanElement\MinicartAutoOpen\ViewModel\Sidebar $viewModel */
+$viewModel = $block->getViewModel();
+?>
+
 <script type="text/x-magento-init">
 {
      "[data-block='minicart']" : {
-        "HumanElement_MiniCartAutoOpen/js/view/minicart_open" : <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>
+        "HumanElement_MiniCartAutoOpen/js/view/minicart_open" : <?php /* @escapeNotVerified */ echo \Zend_Json::encode($viewModel->getConfig()); ?>
      }
 }
 </script>
